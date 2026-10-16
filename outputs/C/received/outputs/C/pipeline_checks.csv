@@ -1,0 +1,5 @@
+experiment,use_s,use_u,fit_n,val_n,feature_count,n_iter,warnings,predict_does_not_refit,probabilities_valid
+E0,False,False,27126,9042,31,25,0,True,True
+ES,True,False,27126,9042,32,25,0,True,True
+EU,False,True,27126,9042,33,25,0,True,True
+ESU,True,True,27126,9042,34,25,0,True,True

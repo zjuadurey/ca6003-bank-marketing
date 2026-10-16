@@ -1,0 +1,8 @@
+Frozen. All four experiments will be reported; no test-dependent model selection.
+test_explicit_authorization_does_not_impersonate_reviews (__main__.AuthorizationTests.test_explicit_authorization_does_not_impersonate_reviews) ... ok
+test_missing_explicit_record_rejected (__main__.AuthorizationTests.test_missing_explicit_record_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+OK

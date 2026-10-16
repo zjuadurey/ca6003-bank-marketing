@@ -1,0 +1,20 @@
+给 D：只补你当前项目缺少的 C 内容
+
+本目录是增量包，依赖你已有的 A 数据、src/data_contract.py、D 评估程序、固定划分及 d_protocol.json。不要在此目录直接运行；按相对路径复制到你自己的项目根目录。
+
+1. 新增 src/preprocessing.py、C_preprocessing_tests.py、requirements.C.lock.txt、notebooks/C_preprocessing.ipynb 和 outputs/C/。
+2. 新增 scripts/validate_d_with_c.py；它是针对 C 内部步骤名适配的验收脚本，不覆盖你原来的 validate_d.py。
+3. 手动编辑现有 config/d_protocol.json：把 pipeline_module 的值改为 src.preprocessing；同步记录 pipeline_provenance，注明采用 C 正式实现、人工接收待本人确认。其余模型参数、阈值、分组保持原值。不要把整个协议替换掉，也不要先执行最终测试。
+4. 本次使用 Python 3.12.14、numpy 2.4.6、pandas 3.0.3、sklearn 1.8.0，与 D 历史环境不同。先备份历史结果，再用同一环境重跑全部四组；不能将历史环境差异当作 S/U 效果。建议新建 .venv_c，安装 requirements.C.lock.txt，不覆盖已有环境。
+
+项目根目录 PowerShell 命令：
+py -3.12 -m venv .venv_c
+.\.venv_c\Scripts\python.exe -m pip install -r requirements.C.lock.txt
+.\.venv_c\Scripts\python.exe C_preprocessing_tests.py
+.\.venv_c\Scripts\python.exe scripts/run_d.py validate
+.\.venv_c\Scripts\python.exe scripts/validate_d_with_c.py
+
+如果已有 freeze.json 或 test_started.json，请先保留记录并与全组确认，不能删除标记绕过封版流程。
+当前 outputs/C 内是 C 本机运行证据，不代表 D 已复核。完整 validation 结果和 analysis.ipynb 在群包的Full_Project 目录，没有放入增量目录，避免无意覆盖你现有的 D 结果。
+特征名/顺序与 D 参考实现可能不同，使用 pipe.get_feature_names_out() 或 pipe[:-1].get_feature_names_out()，不要按旧系数表位置拼接。
+详细交接见 notes/C_TO_D.md，其中涉及 analysis.ipynb、scripts/build_c_delivery.py 等整合文件的说明对应完整项目，不属于此精简增量包。

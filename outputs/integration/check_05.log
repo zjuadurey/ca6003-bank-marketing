@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "train-only loader",
+    "original CSV history counts",
+    "original CSV age/information positive and negative counts",
+    "exact frozen training order",
+    "exception rows exclude holdouts",
+    "all saved tables reproduce"
+  ],
+  "human_review": "pending"
+}

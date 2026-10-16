@@ -1,0 +1,6 @@
+row_id,age,job,marital,education,default,balance,housing,loan,pdays,previous,poutcome,target,age_group,history_group,previous_group,reason,interpretation
+45021,37,management,married,secondary,no,209,no,no,528,7,unknown,0,30-59,previously_contacted,positive,contact_recorded_outcome_unknown,Observed combination; original cause is not identifiable; retain unchanged
+40658,61,retired,married,tertiary,no,3140,yes,yes,98,1,unknown,1,>=60,previously_contacted,positive,contact_recorded_outcome_unknown,Observed combination; original cause is not identifiable; retain unchanged
+43978,30,technician,single,secondary,no,254,yes,yes,416,2,unknown,0,30-59,previously_contacted,positive,contact_recorded_outcome_unknown,Observed combination; original cause is not identifiable; retain unchanged
+42042,26,admin.,single,secondary,no,338,no,no,188,2,unknown,1,<30,previously_contacted,positive,contact_recorded_outcome_unknown,Observed combination; original cause is not identifiable; retain unchanged
+41821,39,management,married,tertiary,no,184,no,no,168,5,unknown,0,30-59,previously_contacted,positive,contact_recorded_outcome_unknown,Observed combination; original cause is not identifiable; retain unchanged

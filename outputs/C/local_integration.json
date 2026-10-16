@@ -1,0 +1,125 @@
+{
+  "received_date_local": "2026-10-16",
+  "archive_sha256": "92b9029c7019e316fdedbf70343e0d6655fed4b7c59f7d184f8fb1ef58019c41",
+  "pipeline": "src.preprocessing",
+  "source_modified": false,
+  "files": [
+    {
+      "archive_path": "C_preprocessing_tests.py",
+      "local_path": "C_preprocessing_tests.py",
+      "sha256": "389207705efce460ace4bf0fe3cc20afc930cd5ca1f387f8277638e440dd5395",
+      "bytes": 8460
+    },
+    {
+      "archive_path": "Integration_Guide.txt",
+      "local_path": "notes/C_Integration_Guide_received.txt",
+      "sha256": "5f787a6266dea3db55e7872908ad9f3d936a8cb54ac626bde6612a3cfb0b88c4",
+      "bytes": 2143
+    },
+    {
+      "archive_path": "notebooks/C_preprocessing.ipynb",
+      "local_path": "notebooks/C_preprocessing.ipynb",
+      "sha256": "d7afa6771bd2bd364962ffd340966305a975d3fe07ea9b61aaa74eadb8150a98",
+      "bytes": 39965
+    },
+    {
+      "archive_path": "notes/C_TO_D.md",
+      "local_path": "notes/C_TO_D.md",
+      "sha256": "58e48031b988825a27b515a9e41cec8929933bd3d45d7b8d45ac894cda59fded",
+      "bytes": 5067
+    },
+    {
+      "archive_path": "outputs/C/A_governance_tests.log",
+      "local_path": "outputs/C/received/outputs/C/A_governance_tests.log",
+      "sha256": "b0802f5a5f38cd4be3e442b9daf27f8cff8982866fda96593e46a0a6537545bc",
+      "bytes": 1450
+    },
+    {
+      "archive_path": "outputs/C/acceptance.json",
+      "local_path": "outputs/C/received/outputs/C/acceptance.json",
+      "sha256": "45ae0c7dc5d48e237db2dd1ad50abcb18658162291d580b8f96b38d29dad2447",
+      "bytes": 253
+    },
+    {
+      "archive_path": "outputs/C/d_integration.json",
+      "local_path": "outputs/C/received/outputs/C/d_integration.json",
+      "sha256": "0930354842516cd9aa58f8bb4a85ecc05315a318834696fe747535ec2a64aa5e",
+      "bytes": 1843
+    },
+    {
+      "archive_path": "outputs/C/environment.json",
+      "local_path": "outputs/C/received/outputs/C/environment.json",
+      "sha256": "6824248da5cd1194ed3d8d26587be565b5cf3a61124924d72f23795f1cae54b9",
+      "bytes": 359
+    },
+    {
+      "archive_path": "outputs/C/feature_names.csv",
+      "local_path": "outputs/C/received/outputs/C/feature_names.csv",
+      "sha256": "62424049c467a7c7e8df6723fdcab67db5c87b08ce5d9fd478ae86ca12a8a25f",
+      "bytes": 4475
+    },
+    {
+      "archive_path": "outputs/C/fit_statistics.json",
+      "local_path": "outputs/C/received/outputs/C/fit_statistics.json",
+      "sha256": "d1991e9401538cb39aa724293d13c90a102b619271fa9263557e8e0cc5831eda",
+      "bytes": 2088
+    },
+    {
+      "archive_path": "outputs/C/history_review_train.csv",
+      "local_path": "outputs/C/received/outputs/C/history_review_train.csv",
+      "sha256": "118976e7137f0affbe623e1d8ea345692ae7871e3f9e0179c35fdba05795d814",
+      "bytes": 136
+    },
+    {
+      "archive_path": "outputs/C/notebook_validation.json",
+      "local_path": "outputs/C/received/outputs/C/notebook_validation.json",
+      "sha256": "2d5d572eb681190b613fcb686bb64453a0b0f5617a62a4cd3b55824da7c58207",
+      "bytes": 451
+    },
+    {
+      "archive_path": "outputs/C/pipeline_checks.csv",
+      "local_path": "outputs/C/received/outputs/C/pipeline_checks.csv",
+      "sha256": "0b8fd8181ef2ae7eac26a1d75ea1d0e781c299a5e55971a34377491c8da3942d",
+      "bytes": 286
+    },
+    {
+      "archive_path": "outputs/C/tests.json",
+      "local_path": "outputs/C/received/outputs/C/tests.json",
+      "sha256": "f9f8d58e2bd7bf50ccf512d1ae68702dc2305cac3fca93541a739a50d5a7adab",
+      "bytes": 129
+    },
+    {
+      "archive_path": "outputs/C/tests.log",
+      "local_path": "outputs/C/received/outputs/C/tests.log",
+      "sha256": "aad7ffd0925b1512854a59749b6aa1a12b5b657d100c28a9290c0944cf8ce582",
+      "bytes": 1700
+    },
+    {
+      "archive_path": "requirements.C.lock.txt",
+      "local_path": "requirements.C.lock.txt",
+      "sha256": "a42f4dcadc6500e863f0f635d5430c8b37df36760de5a9c9658f2ca7e6266b62",
+      "bytes": 851
+    },
+    {
+      "archive_path": "scripts/validate_d_with_c.py",
+      "local_path": "scripts/validate_d_with_c.py",
+      "sha256": "ab9edfcf287b20b2fb44f1926b371643a726e35c50bd80af6fba256a752a7db1",
+      "bytes": 8989
+    },
+    {
+      "archive_path": "src/preprocessing.py",
+      "local_path": "src/preprocessing.py",
+      "sha256": "9df31d319519f117e95e5437cf99709bd44ede1889b5c7551c435e8d069419b7",
+      "bytes": 5075
+    }
+  ],
+  "historical_D_results": "outputs/D/history/reference_20261015",
+  "environment_policy": "Rerun all four configurations in the existing D environment, not mixing supplied C results",
+  "missing_from_increment": [
+    "analysis.ipynb",
+    "scripts/build_c_delivery.py",
+    "scripts/execute_c_notebooks.py"
+  ],
+  "real_test_evaluated": false,
+  "human_review": "pending"
+}

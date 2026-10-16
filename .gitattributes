@@ -2,3 +2,10 @@
 data/raw/* -text
 data/source/*.zip -text
 *.ipynb text eol=lf
+# Frozen/imported evidence is byte-addressed: preserve its original line endings.
+config/d_protocol.json -text whitespace=cr-at-eol
+outputs/D/history/** -text -whitespace
+outputs/C/received/** -text -whitespace
+*.pdf binary
+# Keep generated command output verbatim, including trailing blank lines.
+outputs/integration/*.log -whitespace

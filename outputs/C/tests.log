@@ -1,0 +1,19 @@
+test_all_unknown_fit_fails_without_inventing_mode (__main__.CTests.test_all_unknown_fit_fails_without_inventing_mode) ... ok
+test_fit_statistics_do_not_learn_from_future (__main__.CTests.test_fit_statistics_do_not_learn_from_future) ... ok
+test_four_configs_fixed_model_and_clone (__main__.CTests.test_four_configs_fixed_model_and_clone) ... ok
+test_invalid_pdays_and_actual_missing_stop (__main__.CTests.test_invalid_pdays_and_actual_missing_stop) ... ok
+test_negative_balance_and_tail_are_retained (__main__.CTests.test_negative_balance_and_tail_are_retained) ... ok
+test_pickle_round_trip (__main__.CTests.test_pickle_round_trip) ... ok
+test_real_test_loader_remains_sealed (__main__.CTests.test_real_test_loader_remains_sealed) ... ok
+test_s_boundaries_and_index (__main__.CTests.test_s_boundaries_and_index) ... ok
+test_s_off_keeps_sentinel (__main__.CTests.test_s_off_keeps_sentinel) ... ok
+test_schema_and_unfitted_errors (__main__.CTests.test_schema_and_unfitted_errors) ... ok
+test_status_flag_is_unscaled_and_pdays_removed (__main__.CTests.test_status_flag_is_unscaled_and_pdays_removed) ... ok
+test_u_only_changes_two_columns (__main__.CTests.test_u_only_changes_two_columns) ... ok
+test_unknown_levels_and_poutcome_preserved (__main__.CTests.test_unknown_levels_and_poutcome_preserved) ... ok
+test_whitelist_and_input_immutable (__main__.CTests.test_whitelist_and_input_immutable) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.954s
+
+OK

@@ -1,0 +1,5 @@
+# Authoritative environment entry point for the integrated A+B+C+D project.
+# Use CPython 3.12.x. Historical A/C locks are not installed alongside this file.
+-r requirements.D.lock.txt
+pexpect==4.9.0; sys_platform != "win32"
+ptyprocess==0.7.0; sys_platform != "win32"

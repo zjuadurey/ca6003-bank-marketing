@@ -1,0 +1,6 @@
+history_group,previous_group,poutcome,n,n_positive,n_negative,subscription_rate,small_sample,partition,share_of_train
+never_contacted,zero,unknown,22235,2058,20177,0.09255677985158534,False,train,0.8196932831969328
+previously_contacted,positive,failure,2876,359,2517,0.12482614742698192,False,train,0.10602374106023742
+previously_contacted,positive,other,1117,184,933,0.1647269471799463,False,train,0.041178205411782055
+previously_contacted,positive,success,893,570,323,0.6382978723404256,False,train,0.032920445329204455
+previously_contacted,positive,unknown,5,2,3,0.4,True,train,0.00018432500184325002

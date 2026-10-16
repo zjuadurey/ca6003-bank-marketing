@@ -1,0 +1,7 @@
+field,information,age_standardized_rate,weights,partition
+job,known,0.11699531591968211,pooled training age distribution,train
+job,unknown,0.1328694198316354,pooled training age distribution,train
+education,known,0.11642455644995967,pooled training age distribution,train
+education,unknown,0.1324852422959133,pooled training age distribution,train
+any_unknown,known,0.11650612422202047,pooled training age distribution,train
+any_unknown,unknown,0.1307218531469003,pooled training age distribution,train

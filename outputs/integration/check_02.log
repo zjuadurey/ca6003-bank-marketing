@@ -1,0 +1,15 @@
+test_all_original_artifacts_are_pinned (__main__.GovernanceTests.test_all_original_artifacts_are_pinned) ... ok
+test_loader_preserves_original_values_labels_and_split_order (__main__.GovernanceTests.test_loader_preserves_original_values_labels_and_split_order) ... ok
+test_manifest_complete_disjoint_and_expected_sizes (__main__.GovernanceTests.test_manifest_complete_disjoint_and_expected_sizes) ... ok
+test_modified_bytes_are_rejected (__main__.GovernanceTests.test_modified_bytes_are_rejected) ... ok
+test_policy_covers_every_raw_field_and_tracking_only_row_id (__main__.GovernanceTests.test_policy_covers_every_raw_field_and_tracking_only_row_id) ... ok
+test_predeclared_format_and_coverage_reports (__main__.GovernanceTests.test_predeclared_format_and_coverage_reports) ... ok
+test_split_json_rejects_silent_type_coercion_and_invalid_ranges (__main__.GovernanceTests.test_split_json_rejects_silent_type_coercion_and_invalid_ranges) ... ok
+test_split_report_withholds_holdout_label_statistics (__main__.GovernanceTests.test_split_report_withholds_holdout_label_statistics) ... ok
+test_test_partition_requires_explicit_unsealing (__main__.GovernanceTests.test_test_partition_requires_explicit_unsealing) ... ok
+test_train_audits_recompute_and_no_blockers (__main__.GovernanceTests.test_train_audits_recompute_and_no_blockers) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.649s
+
+OK

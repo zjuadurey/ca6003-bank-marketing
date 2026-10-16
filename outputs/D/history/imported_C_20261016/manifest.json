@@ -1,0 +1,69 @@
+{
+  "source": "LIANG_SHUANG_D_20261016.zip",
+  "files": [
+    {
+      "path": "outputs/D/validation/coefficients.csv",
+      "sha256": "2abf985bff714b0831037fa6a6c7a13c58cecd6ca3a0f658b043fbc86379609d"
+    },
+    {
+      "path": "outputs/D/validation/contrasts.csv",
+      "sha256": "1284f76bd6f14cb5a58bb4e6eb82a9a730d35132052bb63232adc915c177b7c3"
+    },
+    {
+      "path": "outputs/D/validation/metrics.csv",
+      "sha256": "2ae370e3444b141194418b4a59aafac2618f3cc1f0af9a36e41ec5e60b72691d"
+    },
+    {
+      "path": "outputs/D/validation/predictions.csv",
+      "sha256": "75e2918e3460e22bd55900711d1add826251e0e6d34e60b51be35427e8c2ec4c"
+    },
+    {
+      "path": "outputs/D/validation/references.csv",
+      "sha256": "26605e206e5934588be12ecd6d08f182ec4091c045a01e011247f4994c95ee3c"
+    },
+    {
+      "path": "outputs/D/validation/run_manifest.json",
+      "sha256": "975940d9f12d5456321c32d2c95d8fb29e8849e2fcac5b1720f030bf9c7168c1"
+    },
+    {
+      "path": "outputs/D/validation/subgroups.csv",
+      "sha256": "0a00ebb117d243647e634405b911ba234b3345906effd41b24484d9a4090ecc1"
+    },
+    {
+      "path": "outputs/D/validation/subgroup_contrasts.csv",
+      "sha256": "33f58958534bd1bd1ea1d435a7727b00648ae3a3d70575eecca65801e935c58d"
+    },
+    {
+      "path": "outputs/D/figures/validation_overall.png",
+      "sha256": "c3b66d7b12fbb654e68ba7b426d6c3498b389be41a6011420e51e9a2c4efb5ed"
+    },
+    {
+      "path": "outputs/D/figures/validation_subgroup_changes.png",
+      "sha256": "df1534e7bcc47b29adef42d5699fda858585106c382afb1a51da148bb98028b3"
+    },
+    {
+      "path": "outputs/D/qa.json",
+      "sha256": "846c6ee1fe7d2e852e2e5497b677f21a600fefdce074399a99151fe289883ad5"
+    },
+    {
+      "path": "outputs/D/notebook_validation.json",
+      "sha256": "b8f41ebccb8c5e7c09fd249d3c9073ce220396e7a12697a37a020421676706e7"
+    },
+    {
+      "path": "notes/D_HANDOFF.md",
+      "sha256": "4e0256cb254dc01f41190867e333f8c91e605684755c8cbf9555adbe209b573c"
+    },
+    {
+      "path": "notes/D_VIDEO_SCRIPT.md",
+      "sha256": "50853bff034af3578efef5376dfb78ce5c4d3c1735e6754945249f0badcb1eaa"
+    },
+    {
+      "path": "notebooks/D_evaluation.ipynb",
+      "sha256": "c045ba1e7f327eb4a6823ea505a7a82f4ab647b3d1f758d7ea60f6bc11697f01"
+    },
+    {
+      "path": "analysis.ipynb",
+      "sha256": "0b8517cc984de0968eb595b640ced34c64f3f919d27b6ec19e0dcb3a2bb64ec1"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "frozen_artifacts_checked": 37,
+  "method": "SHA256 of git index blobs compared to freeze and test manifests",
+  "line_endings": "frozen CRLF protocol and archived evidence preserved via .gitattributes",
+  "environment_runtime_excluded": true,
+  "archived_import_artifacts_checked": 16,
+  "binary_report_and_original_C_zip_preserved": true
+}

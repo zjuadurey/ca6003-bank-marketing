@@ -1,0 +1,11 @@
+{
+  "words_by_speaker": {
+    "A": 296,
+    "B": 308,
+    "C": 283,
+    "D": 361
+  },
+  "total_words": 1248,
+  "estimated_minutes_at_120_wpm_plus_45s": 11.15,
+  "timed_rehearsal_completed": false
+}

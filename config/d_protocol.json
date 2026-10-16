@@ -1,0 +1,26 @@
+{
+  "owner": "LIANG SHUANG / D",
+  "status": "ABCD_integrated_user_authorized_execution_human_review_pending",
+  "pipeline_module": "src.preprocessing",
+  "pipeline_provenance": "C_Pipeline.zip supplied by user; source copied unchanged via LIANG_SHUANG_D_20261016.zip; human review pending",
+  "model": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "class_weight": null,
+    "random_state": 42
+  },
+  "threshold": 0.5,
+  "age_groups": [
+    "<30",
+    "30-59",
+    ">=60"
+  ],
+  "information_groups": [
+    "any_unknown",
+    "both_known"
+  ],
+  "information_source": "raw job or education equals literal unknown",
+  "small_sample": "n<100 or n_positive<20 or n_negative<20",
+  "policy": "No tuning. Train for validation. After B evidence and automated checks, freeze then train+val refit for one final test under explicit user authorization. Human review remains pending. Report all four experiments."
+}

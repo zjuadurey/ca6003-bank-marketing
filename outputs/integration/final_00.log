@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "test_model_refit": false,
+  "checks": [
+    "freeze fingerprint",
+    "evidence hashes",
+    "validation hashes",
+    "test artifact hashes",
+    "fixed row order and counts",
+    "independent sklearn metrics"
+  ],
+  "human_review": "pending"
+}

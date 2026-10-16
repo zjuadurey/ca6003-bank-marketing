@@ -1,0 +1,42 @@
+{
+  "baseline_identical": true,
+  "source": "../D",
+  "files": [
+    {
+      "path": "src/d_evaluation.py",
+      "source_sha256": "ea42eb0383a86a3858b320d0c73d1f92a15abad6e33b130b8229d212f02f5731",
+      "integrated_sha256": "ea42eb0383a86a3858b320d0c73d1f92a15abad6e33b130b8229d212f02f5731"
+    },
+    {
+      "path": "src/d_reference_pipeline.py",
+      "source_sha256": "f58b09e3b9a0f75c59e397175b450db4a8bd1bb27a7910cc6524a1568dfb3d9e",
+      "integrated_sha256": "f58b09e3b9a0f75c59e397175b450db4a8bd1bb27a7910cc6524a1568dfb3d9e"
+    },
+    {
+      "path": "scripts/run_d.py",
+      "source_sha256": "5dc96689466370210b3131189147e73466983e67e6947297627af3afc4b471b2",
+      "integrated_sha256": "5dc96689466370210b3131189147e73466983e67e6947297627af3afc4b471b2"
+    },
+    {
+      "path": "scripts/validate_d.py",
+      "source_sha256": "467ade83c32068b25a1b291ee4aeab16a898fb427bf3d8ba3a2f94cb9e4b05f8",
+      "integrated_sha256": "ab9edfcf287b20b2fb44f1926b371643a726e35c50bd80af6fba256a752a7db1"
+    },
+    {
+      "path": "config/d_protocol.json",
+      "source_sha256": "9b2b7e1ab3971fb7d56ff240db56c569d4b97f58f2337bc0e7552ef33c06bfb5",
+      "integrated_sha256": "5a82aa364ac3542b5c0f2fa01e6e1a81efb7ef5e0e83c07abaeb3a8e0b0b2891"
+    },
+    {
+      "path": "config/d_handoff_receipt.template.json",
+      "source_sha256": "df7f16970152cc356497512ee25d1557317f31cef89bd82e56e652a62aec8df8",
+      "integrated_sha256": "df7f16970152cc356497512ee25d1557317f31cef89bd82e56e652a62aec8df8"
+    }
+  ],
+  "changes": [
+    "d_protocol points to src.preprocessing",
+    "validate_d uses C transformer and C step names; all-unknown transform uses a valid fit sample",
+    "validate_d uses project-local temporary directories for synthetic gate tests"
+  ],
+  "original_D_directory_modified": false
+}

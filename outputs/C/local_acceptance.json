@@ -1,0 +1,18 @@
+{
+  "time_utc": "2026-10-16T03:23:59.414818+00:00",
+  "status": "passed",
+  "A_governance_tests": 10,
+  "C_preprocessing_tests": 14,
+  "D_evaluation_tests": 12,
+  "total_test_cases": 36,
+  "D_notebook_code_cells": 9,
+  "C_notebook_code_cells": 7,
+  "ACD_draft_code_cells": 18,
+  "C_source_matches_supplied_archive": true,
+  "validation_fingerprint_current": true,
+  "real_test_evaluated": false,
+  "B_discovery": "not_received",
+  "human_review": "pending",
+  "local_C_environment": "requirements.D.lock.txt",
+  "original_C_environment": "requirements.C.lock.txt (provenance only)"
+}

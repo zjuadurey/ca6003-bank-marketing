@@ -1,0 +1,7 @@
+measure,n,denominator,proportion,n_positive,partition
+target_yes,3173,27126,0.11697264616972647,3173,train
+job_unknown,179,27126,0.006598835065988351,22,train
+education_unknown,1100,27126,0.040551500405515,152,train
+any_unknown,1206,27126,0.04445919044459191,163,train
+pdays_minus_one,22235,27126,0.8196932831969328,2058,train
+pdays_nonnegative,4891,27126,0.18030671680306717,1115,train

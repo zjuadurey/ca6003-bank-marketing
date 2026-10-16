@@ -1,0 +1,13 @@
+{
+  "owner": "LIANG SHUANG / D",
+  "status": "provisional_pending_B_C",
+  "pipeline_module": "src.d_reference_pipeline",
+  "pipeline_provenance": "D-authored temporary implementation of manual p6; C has not reviewed",
+  "model": {"C": 1.0, "solver": "lbfgs", "max_iter": 2000, "class_weight": null, "random_state": 42},
+  "threshold": 0.5,
+  "age_groups": ["<30", "30-59", ">=60"],
+  "information_groups": ["any_unknown", "both_known"],
+  "information_source": "raw job or education equals literal unknown",
+  "small_sample": "n<100 or n_positive<20 or n_negative<20",
+  "policy": "No tuning. Train for validation. Train+val refit for final test after real B/C handoff. Report all four experiments."
+}

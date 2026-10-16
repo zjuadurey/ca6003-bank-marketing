@@ -1,0 +1,84 @@
+{
+  "stage": "validation",
+  "time_utc": "2026-10-16T03:17:19.772350+00:00",
+  "status": "C_integrated_pending_B_and_human_review",
+  "fingerprint": {
+    "files": {
+      "config/d_protocol.json": "0c8cdeb67dbd493c8e74aab754a4018a65276e0d263cacb39e2f252391f1b9e8",
+      "config/dataset_lock.json": "bb236382901a75abe669d0efa4a1e4a15deb470c5f3684b693b0bdce25860965",
+      "data/splits/split_indices.json": "01909fad4322dbda27b72151e79c734dd6346e8d6a10bf1f89d01bd9c5f34aa2",
+      "data/splits/split_manifest.csv": "56d283f977937adf4f71b50102dbf3f9c15f923c68a3a7026da19680b1f1f1e1",
+      "data/raw/bank-full.csv": "d1513ec63b385506f7cfce9f2c5caa9fe99e7ba4e8c3fa264b3aaf0f849ed32d",
+      "src/data_contract.py": "13ab6083d1ab5f1ce0c342dbaae61e6a3ec46f3beaaf532168306b3b9012235e",
+      "src/d_evaluation.py": "ea42eb0383a86a3858b320d0c73d1f92a15abad6e33b130b8229d212f02f5731",
+      "scripts/run_d.py": "f41e60c4c51ac9877a5bc0c35115961ba45d9b5eb0d16a52b497d0f11912e7c2",
+      "src/preprocessing.py": "9df31d319519f117e95e5437cf99709bd44ede1889b5c7551c435e8d069419b7"
+    },
+    "environment": {
+      "python": "3.12.14",
+      "platform": "Windows-10-10.0.19045-SP0",
+      "packages": {
+        "numpy": "2.5.4",
+        "pandas": "3.0.6",
+        "scipy": "1.18.1",
+        "scikit-learn": "1.8.0"
+      }
+    }
+  },
+  "fits": [
+    {
+      "experiment": "E0",
+      "use_s": false,
+      "use_u": false,
+      "fit_n": 27126,
+      "fit_n_positive": 3173,
+      "evaluation_n": 9042,
+      "feature_count": 31,
+      "n_iter": [
+        25
+      ],
+      "warnings": []
+    },
+    {
+      "experiment": "ES",
+      "use_s": true,
+      "use_u": false,
+      "fit_n": 27126,
+      "fit_n_positive": 3173,
+      "evaluation_n": 9042,
+      "feature_count": 32,
+      "n_iter": [
+        25
+      ],
+      "warnings": []
+    },
+    {
+      "experiment": "EU",
+      "use_s": false,
+      "use_u": true,
+      "fit_n": 27126,
+      "fit_n_positive": 3173,
+      "evaluation_n": 9042,
+      "feature_count": 33,
+      "n_iter": [
+        25
+      ],
+      "warnings": []
+    },
+    {
+      "experiment": "ESU",
+      "use_s": true,
+      "use_u": true,
+      "fit_n": 27126,
+      "fit_n_positive": 3173,
+      "evaluation_n": 9042,
+      "feature_count": 34,
+      "n_iter": [
+        25
+      ],
+      "warnings": []
+    }
+  ],
+  "undefined_values": "NaN in tables = denominator zero; AP undefined if no positives",
+  "test_loaded": false
+}

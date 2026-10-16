@@ -1,0 +1,77 @@
+{
+  "time_utc": "2026-10-16T08:11:07.256904+00:00",
+  "fingerprint": {
+    "files": {
+      "config/d_protocol.json": "9d9d9af321ab807f9fe3460fed16c6c9d27fa6f10f5a59b9881c74580f693af3",
+      "config/dataset_lock.json": "bb236382901a75abe669d0efa4a1e4a15deb470c5f3684b693b0bdce25860965",
+      "data/splits/split_indices.json": "01909fad4322dbda27b72151e79c734dd6346e8d6a10bf1f89d01bd9c5f34aa2",
+      "data/splits/split_manifest.csv": "56d283f977937adf4f71b50102dbf3f9c15f923c68a3a7026da19680b1f1f1e1",
+      "data/raw/bank-full.csv": "d1513ec63b385506f7cfce9f2c5caa9fe99e7ba4e8c3fa264b3aaf0f849ed32d",
+      "src/data_contract.py": "13ab6083d1ab5f1ce0c342dbaae61e6a3ec46f3beaaf532168306b3b9012235e",
+      "src/d_evaluation.py": "ea42eb0383a86a3858b320d0c73d1f92a15abad6e33b130b8229d212f02f5731",
+      "scripts/run_d.py": "4be1ece0ab40036611c069ae5bd108ee4c0a3ae2c37c102aac85a024bb2515c1",
+      "src/preprocessing.py": "9df31d319519f117e95e5437cf99709bd44ede1889b5c7551c435e8d069419b7"
+    },
+    "environment": {
+      "python": "3.12.12",
+      "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+      "packages": {
+        "numpy": "2.5.4",
+        "pandas": "3.0.6",
+        "scipy": "1.18.1",
+        "scikit-learn": "1.8.0"
+      }
+    }
+  },
+  "receipt": {
+    "B_reviewed_by": "pending",
+    "C_reviewed_by": "pending",
+    "D_reviewed_by": "pending",
+    "reviewed_at": "pending",
+    "execution_authorization": "explicit_user_instruction",
+    "authorization_quote": "探索只使用固定训练集；最终测试仍留给全组复核后执行：直接做完",
+    "authorization_context": "Task owner subsequently authorized installing the isolated environment, completing all runs, and pushing the completed work to GitHub.",
+    "human_review": "pending",
+    "groups_match_manual": true,
+    "pipeline_accepted": true,
+    "acceptance_basis": "Fixed manual definitions; C original source preserved. Automated checks recorded below, not human signatures.",
+    "evidence_files": [
+      "notes/B_findings.md",
+      "notes/B_groups_review.md",
+      "src/b_discovery.py",
+      "outputs/B/history_crosstab.csv",
+      "outputs/B/history_exceptions.csv",
+      "outputs/B/unknown_strata.csv",
+      "outputs/B/numeric_quality.csv",
+      "outputs/B/validation.json",
+      "outputs/C/tests.json",
+      "outputs/D/qa.json",
+      "outputs/integration/authorization_validation.json",
+      "outputs/integration/environment.json"
+    ]
+  },
+  "evidence_hashes": {
+    "notes/B_findings.md": "7991d005f15e3e4b7d744f2888b6ddb47d6bbec5d81814102e111c5cfb78ec3a",
+    "notes/B_groups_review.md": "cb9a412bf571b41c6f54175760bf2cc35c0eb727a2925e927500efd3b6fdf80e",
+    "src/b_discovery.py": "62802a9a5e6b2040927017cf391b5f7df7d9b6d382ba02d7ce2e436b08a9b4cd",
+    "outputs/B/history_crosstab.csv": "b7af2ec27840b91e5c1c777c0e5c3dae2dd230975d69b0ea1a235490ba206ae3",
+    "outputs/B/history_exceptions.csv": "36bcc417911feffa7bb640933f93d09be90a1caa90fdfcb3bd3917d69458fff0",
+    "outputs/B/unknown_strata.csv": "55dd62388e3b5d1e9626dfc2dc9b4d28bc9f9f22e4acb0039753f8cc28c7f1a9",
+    "outputs/B/numeric_quality.csv": "ae85bad1036a318ce5a456f7141725cb28c975d719f18ecd672265cdd4bd5822",
+    "outputs/B/validation.json": "9cd580e0de4e92062f098db28c02dffc4df4170c4a3fe4dc71ce306325c72a15",
+    "outputs/C/tests.json": "63e487a6c697b46820470369656ffa75a4729829b270a1291ec22cac91cc90d7",
+    "outputs/D/qa.json": "fdcb832ad59e742a59f95606de054b366b17664601414a12bcad2c675923df1a",
+    "outputs/integration/authorization_validation.json": "17e79109399f3fe6a2c48c7feaabe469e3f80b333fc52543511cbfecef7ef49f",
+    "outputs/integration/environment.json": "5cdc2c4aa009aaac26350421ad02bd3f387aa438e023587e3cb1859ca1febf34"
+  },
+  "validation_hashes": {
+    "coefficients.csv": "393a8293181654bf88c7f322ba68b6cd79e5eb3299a3ca0a9999570e3d75e170",
+    "contrasts.csv": "3ee03f16a5ea425250ee2260f276a0b616aa39742a9ba09e49fa8711603383a9",
+    "metrics.csv": "a4be43bbc8aee17368c0d39026fd69b25b044a09ad160ce30dca37d4b13d2fda",
+    "predictions.csv": "639d1fd937f9a254adc0fd14c50ea638781ef1cda26568d7d345d074c5045806",
+    "references.csv": "04b6f304b21e11cc63d7229e801303c34b5ab81f6579e2ecb6b8b71e9e756685",
+    "run_manifest.json": "1bbd1e992a75a56ba5d6a478ee7f9977fbe78b23045b97d0e13c3bc687219aa9",
+    "subgroup_contrasts.csv": "a06564d0835ab3072ad6c7a580dea7d32ff5ef2f66e1c0a35f16d97a5f57c99d",
+    "subgroups.csv": "b251fee6a1cdd70de793e2e794423179e8d03e3f06e506761368580bfd84de4b"
+  }
+}

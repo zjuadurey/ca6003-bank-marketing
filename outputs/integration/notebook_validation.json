@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "notebooks": [
+    {
+      "path": "notebooks/B_discovery.ipynb",
+      "started_utc": "2026-10-16T08:14:21.582042+00:00",
+      "completed_utc": "2026-10-16T08:14:39.543059+00:00",
+      "code_cells_executed": 4,
+      "errors": 0,
+      "fresh_kernel": true
+    },
+    {
+      "path": "analysis.ipynb",
+      "started_utc": "2026-10-16T08:14:39.546449+00:00",
+      "completed_utc": "2026-10-16T08:15:02.809599+00:00",
+      "code_cells_executed": 20,
+      "errors": 0,
+      "fresh_kernel": true
+    }
+  ],
+  "B_eda_partition": "train",
+  "final_test_replayed_from_saved_predictions": true,
+  "human_review": "pending"
+}

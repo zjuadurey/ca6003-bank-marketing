@@ -1,0 +1,21 @@
+{
+  "completed_utc": "2026-10-15T06:22:07.363338+00:00",
+  "notebooks": [
+    {
+      "path": "notebooks/C_preprocessing.ipynb",
+      "passed": true,
+      "fresh_kernel": true,
+      "code_cells": 7,
+      "errors": 0,
+      "test_evaluated": false
+    },
+    {
+      "path": "analysis.ipynb",
+      "passed": true,
+      "fresh_kernel": true,
+      "code_cells": 8,
+      "errors": 0,
+      "test_evaluated": false
+    }
+  ]
+}

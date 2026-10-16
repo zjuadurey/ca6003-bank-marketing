@@ -1,0 +1,68 @@
+[
+  {
+    "command": [
+      "-m",
+      "pip",
+      "check"
+    ],
+    "exit_code": 0,
+    "log": "outputs/integration/check_00.log"
+  },
+  {
+    "command": [
+      "scripts/check_environment.py"
+    ],
+    "exit_code": 0,
+    "log": "outputs/integration/check_01.log"
+  },
+  {
+    "command": [
+      "scripts/validate_project.py"
+    ],
+    "exit_code": 0,
+    "log": "outputs/integration/check_02.log"
+  },
+  {
+    "command": [
+      "C_preprocessing_tests.py"
+    ],
+    "exit_code": 0,
+    "log": "outputs/integration/check_03.log"
+  },
+  {
+    "command": [
+      "scripts/build_b_delivery.py"
+    ],
+    "exit_code": 0,
+    "log": "outputs/integration/check_04.log"
+  },
+  {
+    "command": [
+      "scripts/validate_b.py"
+    ],
+    "exit_code": 0,
+    "log": "outputs/integration/check_05.log"
+  },
+  {
+    "command": [
+      "scripts/run_d.py",
+      "validate"
+    ],
+    "exit_code": 0,
+    "log": "outputs/integration/check_06.log"
+  },
+  {
+    "command": [
+      "scripts/validate_d_with_c.py"
+    ],
+    "exit_code": 0,
+    "log": "outputs/integration/check_07.log"
+  },
+  {
+    "command": [
+      "scripts/validate_execution_authorization.py"
+    ],
+    "exit_code": 0,
+    "log": "outputs/integration/check_08.log"
+  }
+]

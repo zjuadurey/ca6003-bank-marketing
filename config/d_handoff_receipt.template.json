@@ -1,0 +1,10 @@
+{
+  "B_reviewed_by": "pending",
+  "C_reviewed_by": "pending",
+  "D_reviewed_by": "pending",
+  "reviewed_at": "pending",
+  "groups_match_manual": false,
+  "pipeline_accepted": false,
+  "evidence_files": [],
+  "notes": "Fill with real reviews only. B: training-only discovery and fixed groups. C: pipeline source and transformation/leakage test results. Paths relative to repo root."
+}

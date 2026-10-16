@@ -1,0 +1,30 @@
+[
+  {
+    "command": [
+      "scripts/validate_final_results.py"
+    ],
+    "exit_code": 0,
+    "log": "outputs/integration/final_00.log"
+  },
+  {
+    "command": [
+      "scripts/build_final_delivery.py"
+    ],
+    "exit_code": 0,
+    "log": "outputs/integration/final_01.log"
+  },
+  {
+    "command": [
+      "scripts/build_presentation.py"
+    ],
+    "exit_code": 0,
+    "log": "outputs/integration/final_02.log"
+  },
+  {
+    "command": [
+      "scripts/execute_final_notebooks.py"
+    ],
+    "exit_code": 0,
+    "log": "outputs/integration/final_03.log"
+  }
+]

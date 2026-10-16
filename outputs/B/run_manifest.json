@@ -1,0 +1,18 @@
+{
+  "partition": "train",
+  "n": 27126,
+  "n_positive": 3173,
+  "exploratory_holdout_access": false,
+  "human_review": "pending",
+  "environment": {
+    "python": "3.12.12",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2"
+  },
+  "inputs_sha256": {
+    "data/raw/bank-full.csv": "d1513ec63b385506f7cfce9f2c5caa9fe99e7ba4e8c3fa264b3aaf0f849ed32d",
+    "data/splits/split_indices.json": "01909fad4322dbda27b72151e79c734dd6346e8d6a10bf1f89d01bd9c5f34aa2",
+    "data/splits/split_manifest.csv": "56d283f977937adf4f71b50102dbf3f9c15f923c68a3a7026da19680b1f1f1e1"
+  }
+}

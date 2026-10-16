@@ -1,4 +1,16 @@
-# CA6003 — Bank Marketing: A 数据底座与治理
+# CA6003 — Bank Marketing: A+B+C+D 整合
+
+**当前进度与下一步：[PROGRESS.md](PROGRESS.md)。环境与版本：[ENVIRONMENT.md](ENVIRONMENT.md)。Agent 入口：[AGENTS.md](AGENTS.md)。**
+
+统一安装入口为 `requirements.current.txt`（引用 D 版本锁），不混装历史 A/C 锁。B 核心代码为 `src/b_discovery.py`，成果生成入口为 `scripts/build_b_delivery.py`；下方原 A 文档和命令保留作来源说明，其“B/C/D 待完成”是初始交付状态，当前状态以 PROGRESS 为准。
+
+当前成果：[总 Notebook](analysis.ipynb)、[B 独立 Notebook](notebooks/B_discovery.ipynb)、[B 发现](notes/B_findings.md)、[最终测试解释](notes/RESULTS.md)、[四人英文讲稿](PRESENTATION_SCRIPT_EN.md)。最终测试已运行，不要重跑测试来调整策略。
+
+仅下载 `.ipynb` 的读者需先克隆本仓库获得原始数据、配置和保存的评价证据，再从仓库根目录运行 Notebook；核心分析、转换和评价函数已内嵌。新内核复核入口为 `scripts/execute_final_notebooks.py`，环境详见 ENVIRONMENT。课程只提交 Notebook 时，应保留此仓库复现说明。
+
+## 原 A 交付说明
+
+> **2026-10-16 · C正式管线已接入D：** 当前使用src.preprocessing，全部验证已重跑，A10+C14+D12项检查通过。先看[缺失清单](notes/D_MISSING_ITEMS.md)、[D交接](notes/D_HANDOFF.md)及[A+C+D草稿](analysis.ipynb)。B发现、实际人工核验和最终测试待完成；统一复跑用requirements.D.lock.txt。下文保留A原始交付说明。
 
 本仓库交付四人项目的 **A / D1 数据基础包**。研究问题：特殊值语义与未知信息处理，如何影响银行营销分类的可靠性？仅使用 UCI 的旧版 `bank-full.csv`。B 的核心发现、C 的四组预处理、D 的模型与评价、最终整合 Notebook 和全组视频仍由对应成员完成。
 

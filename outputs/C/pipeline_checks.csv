@@ -1,0 +1,5 @@
+experiment,use_s,use_u,fit_n,evaluation_n,feature_count,n_iter,warnings,canonical_design_matches_reference
+E0,False,False,27126,9042,31,25,0,True
+ES,True,False,27126,9042,32,25,0,True
+EU,False,True,27126,9042,33,25,0,True
+ESU,True,True,27126,9042,34,25,0,True

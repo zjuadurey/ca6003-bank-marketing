@@ -1,0 +1,27 @@
+{
+  "B_reviewed_by": "pending",
+  "C_reviewed_by": "pending",
+  "D_reviewed_by": "pending",
+  "reviewed_at": "pending",
+  "execution_authorization": "explicit_user_instruction",
+  "authorization_quote": "探索只使用固定训练集；最终测试仍留给全组复核后执行：直接做完",
+  "authorization_context": "Task owner subsequently authorized installing the isolated environment, completing all runs, and pushing the completed work to GitHub.",
+  "human_review": "pending",
+  "groups_match_manual": true,
+  "pipeline_accepted": true,
+  "acceptance_basis": "Fixed manual definitions; C original source preserved. Automated checks recorded below, not human signatures.",
+  "evidence_files": [
+    "notes/B_findings.md",
+    "notes/B_groups_review.md",
+    "src/b_discovery.py",
+    "outputs/B/history_crosstab.csv",
+    "outputs/B/history_exceptions.csv",
+    "outputs/B/unknown_strata.csv",
+    "outputs/B/numeric_quality.csv",
+    "outputs/B/validation.json",
+    "outputs/C/tests.json",
+    "outputs/D/qa.json",
+    "outputs/integration/authorization_validation.json",
+    "outputs/integration/environment.json"
+  ]
+}

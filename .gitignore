@@ -14,3 +14,6 @@ references/
 *.key
 .DS_Store
 Thumbs.db
+tmp/
+!output/pdf/LIANG_SHUANG_D_Evaluation_Report.pdf
+!outputs/D/history/**/output/pdf/*.pdf

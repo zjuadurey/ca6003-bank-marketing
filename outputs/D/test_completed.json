@@ -1,0 +1,14 @@
+{
+  "completed_utc": "2026-10-16T08:11:29.008235+00:00",
+  "freeze_sha256": "a4a7f2bc9c90732fd32059db7586ad29ff624abcf657d006b608444272dd8750",
+  "test_hashes": {
+    "coefficients.csv": "a4f1c37faec3ecf2691edc8adc93763d174dc94bc91f0d66f227d355b3e046ea",
+    "contrasts.csv": "bc6d2046bdd6f8d7a54a4d374769cc3523378f43eb7179244b7a3e55b688a01c",
+    "metrics.csv": "7a0f130c5074a12618953f80b601890c8c0bdb5b2635a5b533d163e9dbcb9f75",
+    "predictions.csv": "ad7f87c7b974d5edc005a4ec2574f26b93972cb1035bbbb689959d5022b086b8",
+    "references.csv": "d3a9bdfff76bdd2bf69cf41d3d3ca427d269c67302286df63dd9787b1a8f6e0f",
+    "run_manifest.json": "b56e0373db9e72be23e43ee28ec932f5db1ea19c91b1bdf77c6fc91eca8a40c3",
+    "subgroup_contrasts.csv": "d68c670d67ccf7973dae93cd38ca87741d9f8090438ac76b10f8dd6a71a472d7",
+    "subgroups.csv": "9f787a976ba42d02ecb7a71efb95fb61a69f00f7cd9dd625aaacd818aa43c303"
+  }
+}
