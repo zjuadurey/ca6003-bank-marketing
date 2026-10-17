@@ -1,4 +1,4 @@
-"""Execute the single-file submission in an empty directory with a fresh kernel."""
+"""Execute the notebook with only its companion archive in a fresh directory/kernel."""
 from pathlib import Path
 from datetime import datetime, timezone
 import ast
@@ -6,6 +6,7 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -42,6 +43,7 @@ with tempfile.TemporaryDirectory(prefix='bank_notebook_check_') as temporary:
     base = Path(temporary)
     work = base / 'empty_working_directory'
     work.mkdir()
+    shutil.copy2(ROOT / 'BankMarketing_Data.zip', work / 'BankMarketing_Data.zip')
     for folder in ['kernels/bank-english', 'runtime', 'ipython', 'jupyter']:
         (base / folder).mkdir(parents=True, exist_ok=True)
     for key, folder in [('JUPYTER_RUNTIME_DIR', 'runtime'), ('IPYTHONDIR', 'ipython'), ('JUPYTER_CONFIG_DIR', 'jupyter')]:
@@ -67,7 +69,8 @@ for cell in nb.cells:
 nbformat.validate(nb)
 nbformat.write(nb, path)
 report = {'status': 'passed', 'started_utc': started, 'completed_utc': datetime.now(timezone.utc).isoformat(),
-          'code_cells_executed': len(codes), 'errors': 0, 'fresh_kernel': True, 'empty_working_directory': True,
+          'code_cells_executed': len(codes), 'errors': 0, 'fresh_kernel': True, 'isolated_working_directory': True,
+          'only_external_input': 'BankMarketing_Data.zip',
           'all_visible_content_english': True, 'unchanged_analysis_and_model_logic': True,
           'unchanged_numerical_markdown_tables': True, 'eda_partition': 'train',
           'validation_models_refitted': 4, 'final_test_replayed_from_saved_predictions': True,

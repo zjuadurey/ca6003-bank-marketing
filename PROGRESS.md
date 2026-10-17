@@ -2,7 +2,7 @@
 
 2026-10-18 更新：成员已确认：A **Yu Qiushi**、B **Chen Junyu**、C **Sun Shaojie**、D **Liang Shuang**。姓名确认不代表人工复核完成。
 
-当前提交入口为全英文、单文件自包含的 `analysis.ipynb`：内嵌原始数据、固定划分和冻结评价证据，核心代码直接展示。使用指定 Python 环境，无须克隆仓库即可 Run All。独立空目录新内核运行结果见 `outputs/integration/english_submission_validation.json`。只重拟合四个验证模型；最终测试核算保存预测，不重训或修改冻结证据。生成与验证入口分别为 `scripts/build_english_submission.py`、`scripts/validate_english_submission.py`。
+按用户最新要求，数据已从加载单元移出：全英文 `analysis.ipynb` 与 `BankMarketing_Data.zip` 放在同一目录，从该目录启动内核即可 Run All。ZIP 包含原始数据、固定划分和冻结评价证据，无须手工解压。核心代码直接展示。只包含伴随 ZIP 的独立目录新内核运行结果见 `outputs/integration/english_submission_validation.json`。只重拟合四个验证模型；最终测试核算保存预测，不重训或修改冻结证据。生成与验证入口分别为 `scripts/build_english_submission.py`、`scripts/validate_english_submission.py`。此版本需要两个文件共同交付；若课程只允许一个文件，须使用此前自包含版本或确认附件规则。
 
 更新：2026-10-16。本文件是当前工作入口；历史 A/C/D 交付中的“B 未收到”“测试未执行”等描述是当时状态。**A+B+C+D 已整合，B 证据、四组验证与一次性最终测试已实际完成；B 和最终 Notebook 新内核执行通过。成员人工复核、视频录制和课程提交仍待完成。**
 
