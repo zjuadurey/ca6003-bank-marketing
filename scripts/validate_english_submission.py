@@ -55,6 +55,9 @@ with tempfile.TemporaryDirectory(prefix='bank_notebook_check_') as temporary:
     finally:
         if manager.has_kernel:
             manager.shutdown_kernel(now=True)
+    cache = work / 'BankMarketing_Data.zip'
+    assert cache.is_file(), 'Fresh execution did not download/cache the archive'
+    assert hashlib.sha256(cache.read_bytes()).hexdigest() == nb.metadata.submission.archive_sha256
 
 codes = [c for c in nb.cells if c.cell_type == 'code']
 assert [c.execution_count for c in codes] == list(range(1, len(codes) + 1))
@@ -68,6 +71,7 @@ nbformat.validate(nb)
 nbformat.write(nb, path)
 report = {'status': 'passed', 'started_utc': started, 'completed_utc': datetime.now(timezone.utc).isoformat(),
           'code_cells_executed': len(codes), 'errors': 0, 'fresh_kernel': True, 'empty_working_directory': True,
+          'public_download_verified': True, 'download_required_no_preexisting_cache': True,
           'all_visible_content_english': True, 'unchanged_analysis_and_model_logic': True,
           'unchanged_numerical_markdown_tables': True, 'eda_partition': 'train',
           'validation_models_refitted': 4, 'final_test_replayed_from_saved_predictions': True,

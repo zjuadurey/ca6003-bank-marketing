@@ -1,11 +1,13 @@
 {
   "status": "passed",
-  "started_utc": "2026-10-17T23:15:13.823170+00:00",
-  "completed_utc": "2026-10-17T23:15:38.908098+00:00",
-  "code_cells_executed": 22,
+  "started_utc": "2026-10-17T23:27:43.203945+00:00",
+  "completed_utc": "2026-10-17T23:28:06.508746+00:00",
+  "code_cells_executed": 21,
   "errors": 0,
   "fresh_kernel": true,
   "empty_working_directory": true,
+  "public_download_verified": true,
+  "download_required_no_preexisting_cache": true,
   "all_visible_content_english": true,
   "unchanged_analysis_and_model_logic": true,
   "unchanged_numerical_markdown_tables": true,
@@ -14,5 +16,5 @@
   "final_test_replayed_from_saved_predictions": true,
   "final_test_models_refitted": 0,
   "human_review": "pending",
-  "notebook_sha256": "e4df554e357a9d6c640af059fe509ab116dae26bda90b3ef6fb046c4821f6e27"
+  "notebook_sha256": "6ba8d8bd7cad3dee9e69bf6792cf38be7319021a533afb22d6426d9ba3dec474"
 }

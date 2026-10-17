@@ -1,6 +1,5 @@
 """Build the English, single-file submission without altering frozen evidence."""
 from pathlib import Path
-import base64
 import hashlib
 import io
 import json
@@ -33,7 +32,7 @@ markdown = {
 | C | Sun Shaojie | Semantic transformation and preprocessing pipelines |
 | D | Liang Shuang | Controlled experiments and evaluation |
 
-This single Notebook contains the data audit, cleaning decisions, EDA, four controlled ML experiments, results and limitations. Core analysis code is inline. Run All restores an embedded, hash-checked evidence snapshot into a temporary directory, reproduces training analyses and validation fits, and recomputes final-test metrics from the previously frozen predictions. It does not refit final-test models or select strategies using test results. No repository clone or data download is required.
+This Notebook contains the data audit, cleaning decisions, EDA, four controlled ML experiments, results and limitations. Submit only this `.ipynb`. Core analysis code is inline. On first execution, the short setup cell downloads the data and evidence archive from a fixed public GitHub commit and verifies its SHA-256. Internet access to raw.githubusercontent.com is required unless the verified archive is already beside the Notebook. No repository clone is needed. Run All reproduces training analyses and validation fits, and recomputes final-test metrics from frozen predictions without refitting final-test models or selecting strategies using test results.
 
 The final test was already executed with the task owner's authorization. Personal review by all four members, video recording and course submission remain pending.
 
@@ -46,9 +45,9 @@ python -m pip install numpy==2.5.4 pandas==3.0.6 scipy==1.18.1 scikit-learn==1.8
 python -m ipykernel install --user --name bank-marketing --display-name "Bank Marketing (Python 3.12)"
 ```
 
-Use an existing Jupyter front end or VS Code, select this kernel and run all cells in order. The embedded `requirements.current.txt` and `requirements.D.lock.txt` provide the full dependency lock; they are available under `ROOT` after the bootstrap cell runs. Runtime versions are printed below. Different numerical-library versions can fail the strict reference checks; use the pinned environment instead of silently relaxing tolerances.
+Use an existing Jupyter front end or VS Code, select this kernel and run all cells in order. The downloaded `requirements.current.txt` and `requirements.D.lock.txt` provide the full dependency lock; they are available under `ROOT` after the bootstrap cell runs. Runtime versions are printed below. Different numerical-library versions can fail the strict reference checks; use the pinned environment instead of silently relaxing tolerances.
 
-The next cell contains only an encoded data archive and is marked for source folding. Leave it collapsed; run it normally with Run All. The following short, visible cell verifies and loads the data. Folding support depends on the Notebook viewer. All substantive analysis and ML code remains visible in the following sections. Temporary files are confined to a newly created directory and do not overwrite local project files.''',
+The next cell downloads and verifies the archive, caches it as `BankMarketing_Data.zip` in the current directory, and extracts it into a new temporary directory. An existing cache must pass the same hash check. The Notebook contains no encoded dataset string or hidden data cell. Source code in the archive is retained for provenance checks, not executed; all substantive analysis and ML code is visible below.''',
 3: '## 01–02 / A: Data provenance, scope and quality governance',
 5: '''## 1. Provenance, license and scope
 
@@ -174,7 +173,7 @@ Relative to baseline, full preparation reduces Recall from 30/112 to 29/112 for 
 
 Compare accuracy with the all-no reference and consider low positive Recall. AP measures ranking and is not trapezoidal PR-AUC. Brier reflects both discrimination and calibration, not a standalone calibration test. Without customer IDs, complete snapshot timing or randomized marketing assignment, we cannot establish customer independence, future generalization, causal call effects or actual profit. Retained numerical tails may affect the linear model. GenAI assistance and pending personal review must remain disclosed.'''
 for index, source in markdown.items():
-    nb.cells[index].source = source
+    nb.cells[index].source = source.replace('embedded', 'downloaded').replace("All required inputs are restored from this Notebook's downloaded snapshot; no personal file paths or online downloads are used.", 'All required inputs come from the version-pinned archive downloaded by the setup cell; no personal file paths are required.')
 
 replacements = {
 'C / D3：手册第 6 页的正式 S/U 管线；不读取任何分区。': 'C / D3: formal S/U pipeline; no partition is loaded here.',
@@ -208,13 +207,21 @@ with zipfile.ZipFile(buffer, 'w', compression=zipfile.ZIP_DEFLATED, compressleve
         archive.writestr(info, (ROOT / relative).read_bytes())
 payload = buffer.getvalue()
 digest = hashlib.sha256(payload).hexdigest()
-encoded = base64.b64encode(payload).decode('ascii')
-bootstrap = '''# Portable, immutable input snapshot (data, split, provenance and evaluation evidence).
+bootstrap = '''# Download a fixed revision, then verify the exact bytes before use.
 # Original evidence bytes are preserved for hash verification, not imported as executable code.
-import base64, hashlib, io, tempfile, zipfile
+import hashlib, io, tempfile, zipfile
 from pathlib import Path, PurePosixPath
-_payload = base64.b64decode(_EMBEDDED_ARCHIVE)
-assert hashlib.sha256(_payload).hexdigest() == DIGEST, 'Embedded archive hash mismatch'
+from urllib.request import urlopen
+DATA_URL = 'https://raw.githubusercontent.com/zjuadurey/ca6003-bank-marketing/891ab3830b4307ba3e53ee9358c8473527476528/BankMarketing_Data.zip'
+_cache = Path('BankMarketing_Data.zip')
+if _cache.is_file():
+    _payload = _cache.read_bytes()
+else:
+    with urlopen(DATA_URL, timeout=60) as _response:
+        _payload = _response.read()
+assert hashlib.sha256(_payload).hexdigest() == DIGEST, 'Data archive hash mismatch'
+if not _cache.exists():
+    _cache.write_bytes(_payload)
 _workspace = tempfile.TemporaryDirectory(prefix='bank_marketing_')
 ROOT = Path(_workspace.name)
 with zipfile.ZipFile(io.BytesIO(_payload)) as _archive:
@@ -224,25 +231,20 @@ with zipfile.ZipFile(io.BytesIO(_payload)) as _archive:
         _target = ROOT.joinpath(*_relative.parts)
         _target.parent.mkdir(parents=True, exist_ok=True)
         _target.write_bytes(_archive.read(_entry))
-print('Embedded evidence restored and archive SHA-256 verified.')
+print('Data and evidence loaded; fixed archive SHA-256 verified.')
 del _payload
 '''.replace('DIGEST', repr(digest))
-data_cell = nbformat.v4.new_code_cell(
-    '# Embedded data only. Keep this cell folded; Run All still executes it.\n_EMBEDDED_ARCHIVE = ' + repr(encoded),
-    metadata={'portable_bootstrap': True, 'jupyter': {'source_hidden': True},
-              'collapsed': True, 'tags': ['hide-input'], 'name': 'Embedded data (keep folded)'})
-data_cell.id = 'embedded-data-folded'
 cell = nbformat.v4.new_code_cell(bootstrap, metadata={'portable_bootstrap': True})
 cell.id = 'portable-evidence-bootstrap'
 nb.cells.insert(1, cell)
-nb.cells.insert(1, data_cell)
 for cell in nb.cells:
     assert not re.search(r'[\u3400-\u9fff]', cell.source), cell.id
     if cell.cell_type == 'code':
         cell.outputs = []
         cell.execution_count = None
 nb.metadata['submission'] = {'language': 'English', 'single_file': True, 'group_number': 17, 'filename': 'Assignment_Grp_17.ipynb', 'archive_sha256': digest,
+                             'data_access': 'version-pinned HTTPS download or verified local cache',
                              'members': {'A': 'Yu Qiushi', 'B': 'Chen Junyu', 'C': 'Sun Shaojie', 'D': 'Liang Shuang'}}
 nbformat.validate(nb)
 nbformat.write(nb, path)
-print(f'Built {path.name}: {len(paths)} embedded files; archive {len(payload):,} bytes')
+print(f'Built {path.name}: download-based loading; verified archive contains {len(paths)} files')

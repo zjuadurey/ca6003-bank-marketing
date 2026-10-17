@@ -1,6 +1,6 @@
 # CA6003 — Bank Marketing: A+B+C+D 整合
 
-课程提交只上传一个 `.ipynb`。当前 `analysis.ipynb` 已恢复自包含版本，第 17 组提交时命名为 `Assignment_Grp_17.ipynb`。`BankMarketing_Data.zip` 是先前拆分版的本地资料，不是本次提交附件。
+课程提交只上传一个 `.ipynb`。当前 `analysis.ipynb` 自动从固定版本链接下载数据，第 17 组提交时命名为 `Assignment_Grp_17.ipynb`。首次运行需要联网；`BankMarketing_Data.zip` 会自动下载并校验，不是本次提交附件。
 
 **当前进度与下一步：[PROGRESS.md](PROGRESS.md)。环境与版本：[ENVIRONMENT.md](ENVIRONMENT.md)。Agent 入口：[AGENTS.md](AGENTS.md)。**
 
@@ -8,7 +8,7 @@
 
 当前成果：[总 Notebook](analysis.ipynb)、[B 独立 Notebook](notebooks/B_discovery.ipynb)、[B 发现](notes/B_findings.md)、[最终测试解释](notes/RESULTS.md)、[四人英文讲稿](PRESENTATION_SCRIPT_EN.md)。最终测试已运行，不要重跑测试来调整策略。
 
-**单文件提交使用 `analysis.ipynb`：正文、注释、图表和输出均为英文。** 数据、划分和冻结评价证据已内嵌，无须克隆仓库；安装 Notebook 开头列出的环境后即可在任意目录 Run All。核心分析、转换和评价函数直接展示。独立空目录复核入口为 `scripts/validate_english_submission.py`，完整环境详见 ENVIRONMENT。成员为 A Yu Qiushi、B Chen Junyu、C Sun Shaojie、D Liang Shuang；人工复核仍待完成。
+**单文件提交使用 `analysis.ipynb`：正文、注释、图表和输出均为英文。** 数据、划分和冻结评价证据通过短代码下载并缓存，无须克隆仓库；安装 Notebook 开头列出的环境后即可联网 Run All。核心分析、转换和评价函数直接展示。独立空目录复核入口为 `scripts/validate_english_submission.py`，完整环境详见 ENVIRONMENT。成员为 A Yu Qiushi、B Chen Junyu、C Sun Shaojie、D Liang Shuang；人工复核仍待完成。
 
 ## 原 A 交付说明
 

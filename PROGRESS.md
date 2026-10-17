@@ -1,10 +1,10 @@
 # CA6003 小组进度与交接
 
-课程最新原文确认只提交 `.ipynb`：正式交付已恢复自包含版本，不需要附上 `BankMarketing_Data.zip`。该 ZIP 仅留作本地拆分版资料。用户已确认第 17 组，最终文件名为 `Assignment_Grp_17.ipynb`，位于上级“最终版”目录；其内容与仓库 `analysis.ipynb` 一致。
+课程只提交 `.ipynb`，用户要求删除硬编码数据：正式交付改为短代码下载固定 GitHub commit 中的 `BankMarketing_Data.zip`，先校验 SHA-256，再读取；首次运行需联网，后续可使用同目录缓存。没有 Base64 数据或隐藏数据单元，无须上传 ZIP。第 17 组最终文件名为 `Assignment_Grp_17.ipynb`，位于上级“最终版”目录；内容与仓库 `analysis.ipynb` 一致。
 
 2026-10-18 更新：成员已确认：A **Yu Qiushi**、B **Chen Junyu**、C **Sun Shaojie**、D **Liang Shuang**。姓名确认不代表人工复核完成。
 
-当前提交入口为全英文、单文件自包含的 `analysis.ipynb`：内嵌原始数据、固定划分和冻结评价证据，核心代码直接展示。使用指定 Python 环境，无须克隆仓库即可 Run All。独立空目录新内核运行结果见 `outputs/integration/english_submission_validation.json`。只重拟合四个验证模型；最终测试核算保存预测，不重训或修改冻结证据。生成与验证入口分别为 `scripts/build_english_submission.py`、`scripts/validate_english_submission.py`。
+当前提交入口为全英文 `analysis.ipynb`：自动下载原始数据、固定划分和冻结评价证据，核心代码直接展示。使用指定 Python 环境，无须克隆仓库即可 Run All。独立空目录中实际下载及新内核运行结果见 `outputs/integration/english_submission_validation.json`。只重拟合四个验证模型；最终测试核算保存预测，不重训或修改冻结证据。生成与验证入口分别为 `scripts/build_english_submission.py`、`scripts/validate_english_submission.py`。
 
 更新：2026-10-16。本文件是当前工作入口；历史 A/C/D 交付中的“B 未收到”“测试未执行”等描述是当时状态。**A+B+C+D 已整合，B 证据、四组验证与一次性最终测试已实际完成；B 和最终 Notebook 新内核执行通过。成员人工复核、视频录制和课程提交仍待完成。**
 

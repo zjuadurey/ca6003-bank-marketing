@@ -2,7 +2,7 @@
 
 ## 单个英文 Notebook 提交
 
-`analysis.ipynb` 已内嵌数据与冻结证据，安装下述环境后可以在任意目录 Run All，无须仓库旁边的其他文件。第 17 组提交文件名为 `Assignment_Grp_17.ipynb`。第一段说明包含英文环境命令；长数据字符串独立为默认折叠单元（`jupyter.source_hidden`、`collapsed`、`hide-input`），后续短加载单元保持可见。折叠显示取决于前端支持，不影响 Run All。核心分析、清洗、EDA 和四方案比较代码全部直接展示。
+`analysis.ipynb` 使用短代码下载数据与冻结证据，安装下述环境后可 Run All，无须克隆仓库或提交其他文件。第 17 组提交文件名为 `Assignment_Grp_17.ipynb`。首次运行需访问 `raw.githubusercontent.com`；固定 commit 的 ZIP 经 SHA-256 校验后缓存在当前目录，后续可离线读取缓存。没有 Base64 数据字符串或隐藏数据单元。下载失败时保留原始错误，不跳过校验或切换数据版本。核心分析、清洗、EDA 和四方案比较代码全部直接展示。
 
 英文提交版本生成：`python scripts/build_english_submission.py`；独立空目录、新内核完整验证：`python scripts/validate_english_submission.py`。验证报告为 `outputs/integration/english_submission_validation.json`。生成会清空执行输出，必须随后运行验证再交付。旧 `build_final_delivery.py` 会生成历史混合语言版本；如使用它，必须随后重新生成并验证英文版本。
 
