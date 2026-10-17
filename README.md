@@ -6,7 +6,7 @@
 
 当前成果：[总 Notebook](analysis.ipynb)、[B 独立 Notebook](notebooks/B_discovery.ipynb)、[B 发现](notes/B_findings.md)、[最终测试解释](notes/RESULTS.md)、[四人英文讲稿](PRESENTATION_SCRIPT_EN.md)。最终测试已运行，不要重跑测试来调整策略。
 
-仅下载 `.ipynb` 的读者需先克隆本仓库获得原始数据、配置和保存的评价证据，再从仓库根目录运行 Notebook；核心分析、转换和评价函数已内嵌。新内核复核入口为 `scripts/execute_final_notebooks.py`，环境详见 ENVIRONMENT。课程只提交 Notebook 时，应保留此仓库复现说明。
+**单文件提交使用 `analysis.ipynb`：正文、注释、图表和输出均为英文。** 数据、划分和冻结评价证据已内嵌，无须克隆仓库；安装 Notebook 开头列出的环境后即可在任意目录 Run All。核心分析、转换和评价函数直接展示。独立空目录复核入口为 `scripts/validate_english_submission.py`，完整环境详见 ENVIRONMENT。成员为 A Yu Qiushi、B Chen Junyu、C Sun Shaojie、D Liang Shuang；人工复核仍待完成。
 
 ## 原 A 交付说明
 

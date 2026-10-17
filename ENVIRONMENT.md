@@ -1,5 +1,11 @@
 # 环境与复现入口
 
+## 单个英文 Notebook 提交
+
+`analysis.ipynb` 已内嵌数据与冻结证据，安装下述环境后可以在任意目录 Run All，无须仓库旁边的其他文件。第一段说明包含英文环境命令；折叠的 bootstrap 单元仅将内嵌快照解压到新临时目录。核心分析、清洗、EDA 和四方案比较代码全部直接展示。
+
+英文提交版本生成：`python scripts/build_english_submission.py`；独立空目录、新内核完整验证：`python scripts/validate_english_submission.py`。验证报告为 `outputs/integration/english_submission_validation.json`。生成会清空执行输出，必须随后运行验证再交付。旧 `build_final_delivery.py` 会生成历史混合语言版本；如使用它，必须随后重新生成并验证英文版本。
+
 ## 当前统一环境
 
 使用 **CPython 3.12.x**，版本系列记录于 `.python-version`；所有第三方依赖通过 **`requirements.current.txt`** 安装，该文件引用 D 最新交付的完整锁 **`requirements.D.lock.txt`**。

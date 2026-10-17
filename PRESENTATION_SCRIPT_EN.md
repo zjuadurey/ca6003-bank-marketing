@@ -6,14 +6,14 @@
 
 | Speaker | Words | Suggested budget | Visual |
 | --- | --- | --- | --- |
-| A | 296 | 00:00–02:45 | Problem, provenance, split and whitelist |
-| B | 308 | 02:45–05:30 | B history cross-tab and unknown-by-age chart |
-| C | 283 | 05:30–08:15 | S/U definitions and four-experiment matrix |
-| D | 361 | 08:15–11:30 | Final metrics, all contrasts and subgroup tradeoffs |
+| A — Yu Qiushi | 296 | 00:00–02:45 | Problem, provenance, split and whitelist |
+| B — Chen Junyu | 308 | 02:45–05:30 | B history cross-tab and unknown-by-age chart |
+| C — Sun Shaojie | 283 | 05:30–08:15 | S/U definitions and four-experiment matrix |
+| D — Liang Shuang | 361 | 08:15–11:30 | Final metrics, all contrasts and subgroup tradeoffs |
 
 下方只有英文正文需要朗读；标题和中文提示不读。D 可将三个年龄组标签读作“under thirty”, “thirty to fifty-nine”, “sixty and above”。若超时，先精简衔接或指标定义，不删除负面结果和限制。
 
-## A
+## A — Yu Qiushi
 
 Hello everyone. Our project asks how the meaning of special values and the treatment of unknown information affect the reliability of bank marketing predictions.
 
@@ -31,7 +31,7 @@ There are important boundaries. We lack unique customer identifiers and complete
 
 My contribution is this reproducible data foundation. B will now explain the evidence that motivates our preparation experiments.
 
-## B
+## B — Chen Junyu
 
 My investigation uses the fixed training partition: 27,126 records, including 3,173 subscriptions. The main finding is that an unknown value cannot be interpreted correctly by inspecting one field alone.
 
@@ -47,7 +47,7 @@ This is not sufficient evidence of Simpson's paradox, causality, or a particular
 
 My contribution is the link from observed data to explicit preparation choices. We now test those choices rather than assuming that more preparation must improve every result.
 
-## C
+## C — Sun Shaojie
 
 I implemented two preparation switches and kept all other experimental conditions fixed.
 
@@ -63,7 +63,7 @@ The complete pipeline learns imputation, scaling, and encoding only during fit. 
 
 My contribution is the shared, switchable preparation implementation. The two switches can change representation, feature count, and regularization behavior, so the score differences are not isolated causal effects. D will report all four configurations, including deterioration and unchanged results.
 
-## D
+## D — Liang Shuang
 
 I evaluated the same basic model under all four preparation configurations. We froze the protocol and then refitted each configuration on the combined training and validation partitions, totaling 36,168 records. The final test contains 9,043 records. We did not tune thresholds or select new features after seeing the test results.
 
