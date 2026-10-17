@@ -1,12 +1,11 @@
 {
   "status": "passed",
-  "started_utc": "2026-10-17T23:11:54.956205+00:00",
-  "completed_utc": "2026-10-17T23:12:17.539378+00:00",
-  "code_cells_executed": 21,
+  "started_utc": "2026-10-17T23:15:13.823170+00:00",
+  "completed_utc": "2026-10-17T23:15:38.908098+00:00",
+  "code_cells_executed": 22,
   "errors": 0,
   "fresh_kernel": true,
-  "isolated_working_directory": true,
-  "only_external_input": "BankMarketing_Data.zip",
+  "empty_working_directory": true,
   "all_visible_content_english": true,
   "unchanged_analysis_and_model_logic": true,
   "unchanged_numerical_markdown_tables": true,
@@ -15,5 +14,5 @@
   "final_test_replayed_from_saved_predictions": true,
   "final_test_models_refitted": 0,
   "human_review": "pending",
-  "notebook_sha256": "463ff40ae13a15fdef821e726b550f870ddcfe24721297f0d3d2e0446fefc696"
+  "notebook_sha256": "e4df554e357a9d6c640af059fe509ab116dae26bda90b3ef6fb046c4821f6e27"
 }

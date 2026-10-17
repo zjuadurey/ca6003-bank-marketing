@@ -1,10 +1,10 @@
 # 环境与复现入口
 
-## 英文 Notebook 与同目录数据
+## 单个英文 Notebook 提交
 
-将 `analysis.ipynb` 与 `BankMarketing_Data.zip` 放在同一目录，安装下述环境后从该目录启动内核并 Run All。无须手工解压。第一段说明包含英文环境命令；短加载单元校验伴随 ZIP 的哈希并解压到新临时目录。核心分析、清洗、EDA 和四方案比较代码全部直接展示。单独发送 Notebook 不再足以复现，须同时提供 ZIP。
+`analysis.ipynb` 已内嵌数据与冻结证据，安装下述环境后可以在任意目录 Run All，无须仓库旁边的其他文件。第 17 组提交文件名为 `Assignment_Grp_17.ipynb`。第一段说明包含英文环境命令；长数据字符串独立为默认折叠单元（`jupyter.source_hidden`、`collapsed`、`hide-input`），后续短加载单元保持可见。折叠显示取决于前端支持，不影响 Run All。核心分析、清洗、EDA 和四方案比较代码全部直接展示。
 
-英文版本及数据 ZIP 生成：`python scripts/build_english_submission.py`；仅含伴随 ZIP 的独立目录、新内核完整验证：`python scripts/validate_english_submission.py`。验证报告为 `outputs/integration/english_submission_validation.json`。生成会清空执行输出，必须随后运行验证再交付。旧 `build_final_delivery.py` 会生成历史混合语言版本；如使用它，必须随后重新生成并验证英文版本。
+英文提交版本生成：`python scripts/build_english_submission.py`；独立空目录、新内核完整验证：`python scripts/validate_english_submission.py`。验证报告为 `outputs/integration/english_submission_validation.json`。生成会清空执行输出，必须随后运行验证再交付。旧 `build_final_delivery.py` 会生成历史混合语言版本；如使用它，必须随后重新生成并验证英文版本。
 
 ## 当前统一环境
 

@@ -1,12 +1,14 @@
 # CA6003 — Bank Marketing: A+B+C+D 整合
 
+课程提交只上传一个 `.ipynb`。当前 `analysis.ipynb` 已恢复自包含版本，第 17 组提交时命名为 `Assignment_Grp_17.ipynb`。`BankMarketing_Data.zip` 是先前拆分版的本地资料，不是本次提交附件。
+
 **当前进度与下一步：[PROGRESS.md](PROGRESS.md)。环境与版本：[ENVIRONMENT.md](ENVIRONMENT.md)。Agent 入口：[AGENTS.md](AGENTS.md)。**
 
 统一安装入口为 `requirements.current.txt`（引用 D 版本锁），不混装历史 A/C 锁。B 核心代码为 `src/b_discovery.py`，成果生成入口为 `scripts/build_b_delivery.py`；下方原 A 文档和命令保留作来源说明，其“B/C/D 待完成”是初始交付状态，当前状态以 PROGRESS 为准。
 
 当前成果：[总 Notebook](analysis.ipynb)、[B 独立 Notebook](notebooks/B_discovery.ipynb)、[B 发现](notes/B_findings.md)、[最终测试解释](notes/RESULTS.md)、[四人英文讲稿](PRESENTATION_SCRIPT_EN.md)。最终测试已运行，不要重跑测试来调整策略。
 
-**使用 `analysis.ipynb` 和同目录的 `BankMarketing_Data.zip`：正文、注释、图表和输出均为英文。** 数据、划分和冻结评价证据保存在伴随 ZIP 中，无须手工解压或克隆仓库；安装 Notebook 开头列出的环境后，从这两个文件所在目录启动内核并 Run All。核心分析、转换和评价函数直接展示。独立目录复核入口为 `scripts/validate_english_submission.py`，完整环境详见 ENVIRONMENT。成员为 A Yu Qiushi、B Chen Junyu、C Sun Shaojie、D Liang Shuang；人工复核仍待完成。此版本须同时提供 Notebook 与 ZIP。
+**单文件提交使用 `analysis.ipynb`：正文、注释、图表和输出均为英文。** 数据、划分和冻结评价证据已内嵌，无须克隆仓库；安装 Notebook 开头列出的环境后即可在任意目录 Run All。核心分析、转换和评价函数直接展示。独立空目录复核入口为 `scripts/validate_english_submission.py`，完整环境详见 ENVIRONMENT。成员为 A Yu Qiushi、B Chen Junyu、C Sun Shaojie、D Liang Shuang；人工复核仍待完成。
 
 ## 原 A 交付说明
 

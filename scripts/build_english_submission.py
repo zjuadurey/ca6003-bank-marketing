@@ -1,5 +1,6 @@
-"""Build the English notebook and companion data archive, preserving frozen evidence."""
+"""Build the English, single-file submission without altering frozen evidence."""
 from pathlib import Path
+import base64
 import hashlib
 import io
 import json
@@ -19,7 +20,9 @@ def tables(index):
 b = tables(21)
 d = tables(39)
 markdown = {
-0: '''# CA6003 Bank Marketing — A+B+C+D
+0: '''# CA6003 Bank Marketing — Group 17
+
+**Submission filename:** `Assignment_Grp_17.ipynb`
 
 **Research question:** How do special-value semantics and unknown-information handling affect predictive reliability?
 
@@ -30,7 +33,7 @@ markdown = {
 | C | Sun Shaojie | Semantic transformation and preprocessing pipelines |
 | D | Liang Shuang | Controlled experiments and evaluation |
 
-This Notebook contains the data audit, cleaning decisions, EDA, four controlled ML experiments, results and limitations. Core analysis code is inline. Keep `BankMarketing_Data.zip` in the same directory as this Notebook and launch the kernel from that directory. Run All checks and extracts this companion archive into a temporary directory, reproduces training analyses and validation fits, and recomputes final-test metrics from the previously frozen predictions. It does not refit final-test models or select strategies using test results. No repository clone is required; both files are required for reproduction.
+This single Notebook contains the data audit, cleaning decisions, EDA, four controlled ML experiments, results and limitations. Core analysis code is inline. Run All restores an embedded, hash-checked evidence snapshot into a temporary directory, reproduces training analyses and validation fits, and recomputes final-test metrics from the previously frozen predictions. It does not refit final-test models or select strategies using test results. No repository clone or data download is required.
 
 The final test was already executed with the task owner's authorization. Personal review by all four members, video recording and course submission remain pending.
 
@@ -43,17 +46,17 @@ python -m pip install numpy==2.5.4 pandas==3.0.6 scipy==1.18.1 scikit-learn==1.8
 python -m ipykernel install --user --name bank-marketing --display-name "Bank Marketing (Python 3.12)"
 ```
 
-Use an existing Jupyter front end or VS Code, select this kernel and run all cells in order. The companion archive includes `requirements.current.txt` and `requirements.D.lock.txt` for the full dependency lock; they are available under `ROOT` after the bootstrap cell runs. Runtime versions are printed below. Different numerical-library versions can fail the strict reference checks; use the pinned environment instead of silently relaxing tolerances.
+Use an existing Jupyter front end or VS Code, select this kernel and run all cells in order. The embedded `requirements.current.txt` and `requirements.D.lock.txt` provide the full dependency lock; they are available under `ROOT` after the bootstrap cell runs. Runtime versions are printed below. Different numerical-library versions can fail the strict reference checks; use the pinned environment instead of silently relaxing tolerances.
 
-The next short cell loads the companion data archive using the standard library. All substantive analysis and ML code remains visible in the following sections. Temporary files are confined to a newly created directory and do not overwrite local project files.''',
+The next cell contains only an encoded data archive and is marked for source folding. Leave it collapsed; run it normally with Run All. The following short, visible cell verifies and loads the data. Folding support depends on the Notebook viewer. All substantive analysis and ML code remains visible in the following sections. Temporary files are confined to a newly created directory and do not overwrite local project files.''',
 3: '## 01–02 / A: Data provenance, scope and quality governance',
 5: '''## 1. Provenance, license and scope
 
 We use only legacy `bank-full.csv`: 45,211 rows, 16 original inputs and target `y`. Provenance follows the outer ZIP, nested `bank.zip`, and original CSV/documentation. The additional dataset, sampled `bank.csv`, and reformatted `data.csv` are excluded.
 
-Source: [UCI Bank Marketing](https://archive.ics.uci.edu/dataset/222/bank+marketing), by Moro, Rita and Cortez; [DOI 10.24432/C5K306](https://doi.org/10.24432/C5K306). License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The legacy documentation also credits Moro, Laureano and Cortez (2011), *Using Data Mining for Bank Direct Marketing: An Application of the CRISP-DM Methodology*. Full attribution is included in `THIRD_PARTY_NOTICES.md` in the companion archive.
+Source: [UCI Bank Marketing](https://archive.ics.uci.edu/dataset/222/bank+marketing), by Moro, Rita and Cortez; [DOI 10.24432/C5K306](https://doi.org/10.24432/C5K306). License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The legacy documentation also credits Moro, Laureano and Cortez (2011), *Using Data Mining for Bank Direct Marketing: An Application of the CRISP-DM Methodology*. Full attribution is included in the embedded `THIRD_PARTY_NOTICES.md`.
 
-Raw bytes remain unchanged. Row identifiers, splits and audits are project derivatives. Attribution does not imply endorsement by the authors or UCI. All required inputs are restored from the companion archive; no personal file paths or online downloads are used.''',
+Raw bytes remain unchanged. Row identifiers, splits and audits are project derivatives. Attribution does not imply endorsement by the authors or UCI. All required inputs are restored from this Notebook's embedded snapshot; no personal file paths or online downloads are used.''',
 7: '''## 2. Read without semantic cleaning and freeze the exact split
 
 `keep_default_na=False` preserves literal `unknown` and empty strings; actual missing values are checked separately. `row_id=np.arange(len(raw))` is the zero-based original row position, not a customer identifier or predictor. Both stratified splits use `random_state=42`; the second stratifies on `y.iloc[dev]`. The manifest is sorted by original row ID, while the JSON preserves the order returned by the split operations.''',
@@ -84,7 +87,7 @@ At the task owner's request, OpenAI Codex assisted C/D integration, B implementa
 
 **GenAI disclosure:** OpenAI Codex assisted coding, debugging, analysis suggestions, charts, explanation drafts, translation and automated verification. Checks include independent raw-CSV counts, hashes and frozen partitions, transformation and leakage tests, prediction-level metric reconstruction, and execution in a fresh kernel. Automated checks do not constitute personal understanding or signatures. All members must review and be able to explain the submitted work.
 
-Member names have been supplied. Remaining items are the group number, actual member review, a continuous four-person video within 12 minutes, its public link, NTULearn submission and peer assessment. Data attribution and CC BY 4.0 licensing are retained above and in the embedded source notices.'''
+Group 17 and all member names have been supplied. Remaining items are actual member review, a continuous four-person video within 12 minutes, its public link, NTULearn submission and peer assessment. Data attribution and CC BY 4.0 licensing are retained above and in the embedded source notices.'''
 }
 markdown[21] = '''# B / D2: Data insights and preparation rationale
 
@@ -171,7 +174,7 @@ Relative to baseline, full preparation reduces Recall from 30/112 to 29/112 for 
 
 Compare accuracy with the all-no reference and consider low positive Recall. AP measures ranking and is not trapezoidal PR-AUC. Brier reflects both discrimination and calibration, not a standalone calibration test. Without customer IDs, complete snapshot timing or randomized marketing assignment, we cannot establish customer independence, future generalization, causal call effects or actual profit. Retained numerical tails may affect the linear model. GenAI assistance and pending personal review must remain disclosed.'''
 for index, source in markdown.items():
-    nb.cells[index].source = source.replace('embedded source notices', 'companion source notices').replace('Source tables are embedded or recomputed.', 'Source tables are included in the companion archive or recomputed.').replace('The embedded run manifest', 'The companion run manifest')
+    nb.cells[index].source = source
 
 replacements = {
 'C / D3：手册第 6 页的正式 S/U 管线；不读取任何分区。': 'C / D3: formal S/U pipeline; no partition is loaded here.',
@@ -205,15 +208,13 @@ with zipfile.ZipFile(buffer, 'w', compression=zipfile.ZIP_DEFLATED, compressleve
         archive.writestr(info, (ROOT / relative).read_bytes())
 payload = buffer.getvalue()
 digest = hashlib.sha256(payload).hexdigest()
-(ROOT / 'BankMarketing_Data.zip').write_bytes(payload)
+encoded = base64.b64encode(payload).decode('ascii')
 bootstrap = '''# Portable, immutable input snapshot (data, split, provenance and evaluation evidence).
 # Original evidence bytes are preserved for hash verification, not imported as executable code.
-import hashlib, io, tempfile, zipfile
+import base64, hashlib, io, tempfile, zipfile
 from pathlib import Path, PurePosixPath
-_data_file = Path('BankMarketing_Data.zip')
-assert _data_file.is_file(), 'Place BankMarketing_Data.zip beside this notebook and run from that directory'
-_payload = _data_file.read_bytes()
-assert hashlib.sha256(_payload).hexdigest() == DIGEST, 'Companion archive hash mismatch'
+_payload = base64.b64decode(_EMBEDDED_ARCHIVE)
+assert hashlib.sha256(_payload).hexdigest() == DIGEST, 'Embedded archive hash mismatch'
 _workspace = tempfile.TemporaryDirectory(prefix='bank_marketing_')
 ROOT = Path(_workspace.name)
 with zipfile.ZipFile(io.BytesIO(_payload)) as _archive:
@@ -223,19 +224,25 @@ with zipfile.ZipFile(io.BytesIO(_payload)) as _archive:
         _target = ROOT.joinpath(*_relative.parts)
         _target.parent.mkdir(parents=True, exist_ok=True)
         _target.write_bytes(_archive.read(_entry))
-print('Companion data archive loaded and SHA-256 verified.')
+print('Embedded evidence restored and archive SHA-256 verified.')
 del _payload
 '''.replace('DIGEST', repr(digest))
+data_cell = nbformat.v4.new_code_cell(
+    '# Embedded data only. Keep this cell folded; Run All still executes it.\n_EMBEDDED_ARCHIVE = ' + repr(encoded),
+    metadata={'portable_bootstrap': True, 'jupyter': {'source_hidden': True},
+              'collapsed': True, 'tags': ['hide-input'], 'name': 'Embedded data (keep folded)'})
+data_cell.id = 'embedded-data-folded'
 cell = nbformat.v4.new_code_cell(bootstrap, metadata={'portable_bootstrap': True})
 cell.id = 'portable-evidence-bootstrap'
 nb.cells.insert(1, cell)
+nb.cells.insert(1, data_cell)
 for cell in nb.cells:
     assert not re.search(r'[\u3400-\u9fff]', cell.source), cell.id
     if cell.cell_type == 'code':
         cell.outputs = []
         cell.execution_count = None
-nb.metadata['submission'] = {'language': 'English', 'single_file': False, 'companion_file': 'BankMarketing_Data.zip', 'archive_sha256': digest,
+nb.metadata['submission'] = {'language': 'English', 'single_file': True, 'group_number': 17, 'filename': 'Assignment_Grp_17.ipynb', 'archive_sha256': digest,
                              'members': {'A': 'Yu Qiushi', 'B': 'Chen Junyu', 'C': 'Sun Shaojie', 'D': 'Liang Shuang'}}
 nbformat.validate(nb)
 nbformat.write(nb, path)
-print(f'Built {path.name} and BankMarketing_Data.zip: {len(paths)} companion files; archive {len(payload):,} bytes')
+print(f'Built {path.name}: {len(paths)} embedded files; archive {len(payload):,} bytes')

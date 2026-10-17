@@ -1,8 +1,10 @@
 # CA6003 小组进度与交接
 
+课程最新原文确认只提交 `.ipynb`：正式交付已恢复自包含版本，不需要附上 `BankMarketing_Data.zip`。该 ZIP 仅留作本地拆分版资料。用户已确认第 17 组，最终文件名为 `Assignment_Grp_17.ipynb`，位于上级“最终版”目录；其内容与仓库 `analysis.ipynb` 一致。
+
 2026-10-18 更新：成员已确认：A **Yu Qiushi**、B **Chen Junyu**、C **Sun Shaojie**、D **Liang Shuang**。姓名确认不代表人工复核完成。
 
-按用户最新要求，数据已从加载单元移出：全英文 `analysis.ipynb` 与 `BankMarketing_Data.zip` 放在同一目录，从该目录启动内核即可 Run All。ZIP 包含原始数据、固定划分和冻结评价证据，无须手工解压。核心代码直接展示。只包含伴随 ZIP 的独立目录新内核运行结果见 `outputs/integration/english_submission_validation.json`。只重拟合四个验证模型；最终测试核算保存预测，不重训或修改冻结证据。生成与验证入口分别为 `scripts/build_english_submission.py`、`scripts/validate_english_submission.py`。此版本需要两个文件共同交付；若课程只允许一个文件，须使用此前自包含版本或确认附件规则。
+当前提交入口为全英文、单文件自包含的 `analysis.ipynb`：内嵌原始数据、固定划分和冻结评价证据，核心代码直接展示。使用指定 Python 环境，无须克隆仓库即可 Run All。独立空目录新内核运行结果见 `outputs/integration/english_submission_validation.json`。只重拟合四个验证模型；最终测试核算保存预测，不重训或修改冻结证据。生成与验证入口分别为 `scripts/build_english_submission.py`、`scripts/validate_english_submission.py`。
 
 更新：2026-10-16。本文件是当前工作入口；历史 A/C/D 交付中的“B 未收到”“测试未执行”等描述是当时状态。**A+B+C+D 已整合，B 证据、四组验证与一次性最终测试已实际完成；B 和最终 Notebook 新内核执行通过。成员人工复核、视频录制和课程提交仍待完成。**
 
@@ -28,7 +30,7 @@
 
 ## 尚需真实人员完成的信息和动作
 
-- 组号、各自实际复核记录；四位姓名已经用户确认，不表示已经审阅本次修改。
+- 各自实际复核记录；组号 17 和四位姓名已经用户确认，不表示已经审阅本次修改。
 - 四人实际出镜录制单个连续视频（不超过 12 分钟），公开链接和实际上传凭证。
 - NTULearn 上确认截止与提交状态；课程文件写 10 月 18 日 12:00 前交 Notebook + 视频，10 月 21 日 12:00 前交互评，时区以平台为准。
 - GenAI 使用需声明，成员须能解释代码、证据、处理理由和结论。自动化通过不能替代此责任。
